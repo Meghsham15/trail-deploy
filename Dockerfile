@@ -25,7 +25,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies for production
-RUN npm install --only=production
+RUN npm install 
 
 # Copy built React app from the previous stage
 COPY --from=build /usr/src/app/client/build ./client/build
